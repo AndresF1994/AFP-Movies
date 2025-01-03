@@ -1,0 +1,329 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* pseudoclase  css para la etiqueta HTML*/
+:root{
+    --bg-color: rgba(27,25,25);
+    --primary-color: #b1dd00;
+    --secondary-color: #143954; 
+    --thir-color:#62828f;
+    --bg-input-color:rgb(255,255,255,0.1);
+
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family:'Nunito Sans', serif ;
+}
+
+h2{
+    color: white;
+    font-size: 2vw;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    width: 100%;
+    background-color:#62828f;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 60px;
+}
+
+#logo{
+    font-weight: bold;
+}
+
+#logo a{
+    color: #fff;
+}
+
+.nav-link {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-link li > a {
+    color:#fff;
+    text-decoration: none;
+}
+
+.nav-link a:hover{
+    color: black;
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.menu-toggle-icon{
+    display: none;
+    cursor: pointer;
+    color: white;
+    font-size: 30px;
+}
+
+.movil-nav{
+    display: none;
+    flex-direction: column;
+    background-color:#62828f;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 60px;
+    text-align: center;
+}
+
+.movil-nav li{
+    padding: 10px;
+}
+
+.menu-toggle:checked~.movil-nav {
+    display: flex;
+}
+
+#banner{
+    background-image: url(/static/img/banner_cine.jpg);
+    background-size: cover;
+    width: 100%;
+    background-position: center;
+    height: 60vh;
+    box-shadow: inset 0 0 0 2000px rgb(84, 84, 84, 0.5);
+}
+
+
+.banner-css{
+    background-color: var(--bg-color);
+}
+
+.banner-card{
+    text-align: center;
+    padding: 0px 160px;
+}
+
+.banner-card h1{
+    color: #fff;
+    font-size: 4vw;
+}
+
+.banner-card h2{
+    margin-bottom: 20px
+}
+
+#search{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-title{
+    color: white;
+    font-size: 3vw;
+}
+
+.input-search{
+    background-color: rgb(255,255,255,0.1);
+    border: 2px solid white;
+    padding: 0 20px;
+    border-radius: 25px;
+    color: white;
+    font-size: 16px;
+    margin: 20px 0;
+    height: 50px;
+    width: 70%;
+    outline: none;
+    font-family: 'Nunito Sans', serif;
+}
+
+#popular h2, #top-rated, #search{
+    text-align: center;
+}
+
+#popular h2, #top-rated h2h{
+    margin: 10px 0px;
+}
+
+.btn-afp{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-afp:hover{
+    color: black;
+    transform: scale(1.05);
+}
+
+.container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Define 4 columnas */
+    grid-row: repeat(2,1fr);
+    justify-items: center; /* Centra los elementos horizontalmente */
+    row-gap: 20px; /* Espaciado entre filas */
+}
+
+.movie-item {
+    border-radius: 20px; /* Bordes redondeados */
+    overflow: hidden; /* Asegura que el contenido respete el borde */
+    position: relative;
+    width: 220px; /* Ajusta el tamaño según necesites */
+    height: 300px; /* Proporción de tarjeta */
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.movie-item:hover {
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */ /* Incrementa la sombra al hacer hover */
+}
+
+.movies-scroller{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 0px 40px 0px;
+}
+
+.movie-item-v2{
+    border-radius: 30px; /* Bordes redondeados */
+    width: 170px; /* Ajusta el tamaño según necesites */
+    font-size: 20px;
+    display: flex;
+    margin: 30px ;
+    justify-content: space-between;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.wrapper img{
+    width: 200px;
+    height: 300px; 
+}
+
+footer {
+    background-color: #62828f;
+    width: 100%; /* Color de fondo oscuro */
+    color: #fff; /* Color del texto */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Iconos de redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacio entre iconos */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+/* Contenedor principal de las columnas */
+.footer-clumns {
+    display: flex;
+    justify-content: space-between; /* Espacio uniforme entre columnas */
+    flex-wrap: wrap; 
+    margin: 0 auto;
+    max-width: 1000px;/* Ajusta las columnas si la pantalla es pequeña */
+    text-align: left; /* Alineación de texto a la izquierda */
+}
+
+/* Estilo de cada columna */
+.footer-colum {
+    flex: 1;
+    min-width: 200px;
+    margin:10px;
+    display: flex;
+    flex-direction: column; /* Alineación vertical */
+    gap: 10px;
+   
+}
+
+.footer-colum a {
+    color: #aaa; /* Color del texto */
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-colum a:hover {
+    color: #fff; /* Cambio de color al pasar el mouse */
+    text-decoration: underline;
+}
+
+footer p{
+    margin-top: 20px;
+    font-size: 12px;
+    color: #aaa;
+}
+
+/* Responsive */
+/*menu hamburguesa*/
+@media (max-width: 1000px){
+    .desktop-nav{
+        display: none;
+    }
+
+    .menu-toggle-icon{
+        display: block ;
+    }
+}
+
+/*menu tablets*/
+@media screen and (min-width: 760px) and (max-width: 1000px){
+    h2{
+        font-size: 3.5vw;
+    }
+
+    .movies-grid{
+        grid-template-columns: repeat(2, 1fr); /* Define 4 columnas */
+        grid-row: repeat(4,1fr);
+    }
+}
+
+/*menu celulares*/
+@media screen and (max-width: 760px){
+    h2{
+        font-size: 3vw;
+    }
+
+    .movies-grid{
+        grid-template-columns: repeat(1, 1fr); /* Define 4 columnas */
+    }
+}
+    
+    
+

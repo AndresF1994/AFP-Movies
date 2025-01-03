@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfP-Movies</title>
+    <script src="https://kit.fontawesome.com/3313f80c63.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/static/img/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body id="body">
+
+    <header class="header">
+        <nav>
+            <div id="logo">
+                <a href="/index.html"><i class="fas fa-film fa-spin"></i>AfP-Movies</a>
+            </div>
+            <!-- navegador de escritorio-->
+            <ul class="nav-link desktop-nav">
+                <li>Tendencias</li>
+                <li><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">API
+                        Movie</a></li>
+                <li><a href="" class="btn-afp">
+                    <i class="fas fa-sing-in-alt"></i><span class="login-text">Iniciar Sesión</span></a></li>
+                <li><a href="registro.html" class="btn-afp">Registrarse</a></li>
+
+            </ul>
+            <!-- navegador móvil(hamburguesa)-->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-link movil-nav">
+                <li>Tendencias</li>
+                <li><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">API
+                        Movie</a></li>
+                <li><a href="#">Iniciar Sesión</li>
+                <li><a href="registro.html">Registrarse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="banner" class="banner-css">
+            <div class="banner-card container">
+                <h1>PELICULAS, SERIES ILIMITADAS Y MUCHO MAS</h1>
+                <h2>DISFRUTA DONDE QUIERA QUE ESTES</h2>
+                <a href="registro.html" class="btn-afp">Registrarse</a>
+                <a href="#" class="btn-afp">Iniciar Sesión</a>
+            </div>
+        </section>
+
+        <section id="search">
+            <h2 class="search-title">¿Que estas buscando para ver?</h2>
+            <input type="text" class="input-search" placeholder="Buscar">
+        </section>
+
+        <section id="popular" class="container">
+            <h2 class="h2-subtitle">Tendencias</h2>
+            <div id="popular-list" class="movies-grid">
+
+                <div class="movie-item">
+                    <a href="/datail-movie.html">
+                        <img src="/static/img/aventuras.jpg" alt="aventuras" class="movie-item">
+                        <div class="movie-item-detail">
+                            <p class="movie-item-detail-title">Nombre de la película</p>
+                            <p class="movie-item-detail-title">2024 - 8.5</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="movie-item">
+                    <a href="/datail-movie.html">
+                        <img src="/static/img/thor.jpg" alt="thor" class="movie-item">
+                        <div class="movie-item-detail">
+                            <p class="movie-item-detail-title">Nombre de la película</p>
+                            <p class="movie-item-detail-title">2024 - 8.5</p>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Más elementos de película -->
+
+                <div class="movie-item">
+                    <a href="/datail-movie.html">
+                        <img src="/static/img/wall.jpg" alt="wall" class="movie-item">
+                        <div class="movie-item-detail">
+                            <p class="movie-item-detail-title">Nombre de la película</p>
+                            <p class="movie-item-detail-title">2024 - 8.5</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="movie-item">
+                    <a href="/datail-movie.html">
+                        <img src="/static/img/wall.jpg" alt="wall" class="movie-item">
+                        <div class="movie-item-detail">
+                            <p class="movie-item-detail-title">Nombre de la película</p>
+                            <p class="movie-item-detail-title">2024 - 8.5</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="top-rated">
+            <div class="container">
+                <h2>Las más aclamadas</h2>
+                <div id="top-rated-list" class="movies-scroller">
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                    <div class="movie-item-v2">
+                        <div class="wrapper">
+                            <img src="/static/img/caballero.jpg" alt="corazon de caballero">
+                        </div>
+                        <div class="movie-item-detail-v2">
+                            <p class="movie-item-detail-title-v2">Corazon de caballero</p>
+                            <p class="movie-item-detail-title-v2">2024 - 8.5</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="social-icons">
+                <a href="http://www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://x.com/?lang=es"><i class="fa-brands fa-square-twitter"></i></a>
+                <a href="https://www.instagram.com/#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-square-youtube"></i></a>
+            </div>
+            <div class="footer-clumns">
+                <div class="footer-colum">
+
+                    <a href="">Terminos y condiciones</a>
+                    <a href="">Preguntas Frecuentes</a>
+                    <a href="">Centro de Ayuda <i><i class="fa-regular fa-circle-question"></i></i></a>
+
+                </div>
+                <div class="footer-colum">
+
+                    <a href="">Contactanos</a>
+                    <a href="">Avisos legales</a>
+                    <a href="">Privacidad</a>
+
+                </div>
+                <div class="footer-colum">
+                    <a href="">Relaciones con inversionistas</a>
+                    <a href="">Tarjetas de regalos</a>
+                    <a href="">Terminos de usos</a>
+                </div>
+
+                <div class="footer-colum">
+                    <a href="#">Prensa</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Contáctanos</a>
+                </div>
+            </div>
+            <p> &copy; 2024 Mi primera pagina. todos los derechos reservados</p>
+        </footer>
+    </main>
+</body>
+
+</html>
