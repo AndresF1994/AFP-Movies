@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 .form-wrapper{
@@ -16,13 +16,15 @@
     border-radius: 4px;
     padding: 20px 70px;
     width: 450px;
-    background-color: rgb(42,42,42,1);
-    transform: translate(-50%, -50%);
-    margin-top: 40px;
+    background-color: rgba(42,42,42,1);
+    transform: translate(-50%,-50%);
+    margin-top:65px;
+    z-index: 1;
+    margin-bottom: 100px;
 }
 
 .form-wrapper h2{
-    color: white;
+    color:white;
     font-size: 2rem;
 }
 
@@ -31,16 +33,17 @@
 }
 
 form .form-control{
-    height:50px;
+    height: 50px;
     position: relative;
     margin-top: 15px;
 }
 
+
 form .form-control input{
-    height:100%;
+    height: 100%;
     width: 100%;
     border: solid white 2px;
-    background-color: rgba(255,255, 255, 0.1);
+    background-color: rgba(255,255,255,0.1);
     border-radius: 25px;
     outline: none;
     color: white;
@@ -48,27 +51,31 @@ form .form-control input{
     padding: 0 20px;
 }
 
+form .form-control input:is(:focus, :valid){
+background: #444;
+padding: 16px 20px 0;
+}
+
+
+
 .form-control label{
     position: absolute;
-    left: 20%;
+    left: 20px;
     color:grey;
+    top: 50%;
     font-size: 1rem;
-    top:50%;
     transform: translateY(-50%);
-    pointer-events: none;
+    pointer-events: none ;
     transition: all 0.1s ease;
 }
 
-#Birthdate{
+#birthdate{
     padding: 16px 20px 0px;
 }
 
-#label-Birthdate{
+#label-birthdate{
     font-size: 0.75rem;
-}
-
-input[type="date"]::placeholder {
-    color: transparent; /* Esto oculta el texto */
+    transform:translateY(-130%)
 }
 
 .form-select{
@@ -80,7 +87,7 @@ input[type="date"]::placeholder {
     font-weight: 400;
     line-height: 1.5;
     color: white;
-    border:2px solid white;
+    border: 2px solid white;
     border-radius: 25px;
 }
 
@@ -92,12 +99,65 @@ form button{
     width: 100%;
     padding: 16px 0;
     font-size: 1rem;
-    background-color:#b1dd00;
-    color: grey;
+    background-color: #b1dd00;
+    color:grey;
     font-weight: 500;
-    border:none;
+    border: none;
+    outline: none;
     border-radius: 4px;
     margin: 25px 0 10px;
     cursor: pointer;
-    transition: 0.1 ease-in-out;
+    transition: 0.1 ease;
+}
+form button:hover{
+    background-color: #94b900;
+}
+
+.form-wrapper a {
+    text-decoration: none;
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+.form-wrapper :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+
+form .form-terms {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+form .terms {
+    display: flex;
+}
+
+form .terms input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+
+form .form-terms :where(label, a) {
+    font-size: 0.9rem;
+}
+
+.form-wrapper p a {
+    color: #fff;
+}
+
+
+.body-register footer {
+    margin-top: 650px; 
+}
+
+.error{
+    color:red;
+    margin-bottom: 5px;
+}
+
+.form-control input.error, .form-select.error{
+    border: 2px solid red;
 }
