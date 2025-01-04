@@ -114,6 +114,17 @@ nav{
 .banner-card{
     text-align: center;
     padding: 0px 160px;
+    animation: appear 6s ease forwards;
+    opacity: 0; 
+}
+
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .banner-card h1{
@@ -195,7 +206,9 @@ nav{
     height: 300px; /* Proporción de tarjeta */
     display: inline-block;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+
+    transition: transform 0.5s ease-in-out;
+    transform-origin: center center;
 }
 
 .movie-item:hover {

@@ -8,57 +8,72 @@
     <script src="https://kit.fontawesome.com/3313f80c63.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/img/css/style.css">
+    <link rel="stylesheet" href="/static/img/css/register.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
         rel="stylesheet">
 
-<body id="body">
+<body class="body-register">
     <header class="header">
         <nav>
             <div id="logo">
                 <a href="/index.html"><i class="fas fa-film fa-spin"></i>AfP-Movies</a>
             </div>
-            <ul class="nav-link">
-                <li><a href="/registro.html">Registrate</a></li>
+            <!-- navegador de escritorio-->
+            <ul class="nav-link desktop-nav">
                 <li>Tendencias</li>
                 <li><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">API
                         Movie</a></li>
-                <li>Iniciar Sesión</li>
+                <li><a href="" class="btn-afp">
+                    <i class="fas fa-sing-in-alt"></i><span class="login-text">Iniciar Sesión</span></a></li>
+                <li><a href="registro.html" class="btn-afp">Registrarse</a></li>
 
+            </ul>
+            <!-- navegador móvil(hamburguesa)-->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="menu-toggle-icon">
+                <i class="fas fa-bars"></i>
+            </label>
+            <ul class="nav-link movil-nav">
+                <li>Tendencias</li>
+                <li><a href="https://developer.themoviedb.org/reference/intro/getting-started" target="_blank">API
+                        Movie</a></li>
+                <li><a href="#">Iniciar Sesión</li>
+                <li><a href="registro.html">Registrarse</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section>
-            <h1>Formulario de Registro</h1>
+        <section class="form-wrapper">
+            <h2>Registro</h2>
 
-            <form action="" id="formRegister" method="get">
-                <div>
+            <form  id="formRegister" method="post" novalidate action="#">
+                <div class="form-control">
                     <label for="FirtsName">Nombre</label>
                     <input type="text" id="FirtsName" name="FirtsName" maxlength="15" required>
                 </div>
-                <div>
+                <div class="form-control">
                     <label for="LastName">Apellido</label>
                     <input type="text" id="LastName" name="LastName" maxlength="15" required>
                 </div>
-                <div>
+                <div class="form-control">
                     <label for="Birthdate">Fecha de Nacimiento</label>
                     <input type="date" id="Birthdate" name="Birthdate" required>
                 </div>
-                <div>
+                <div class="form-control">
                     <label for="Email">Correo</label>
                     <input type="email" id="Email" name="Email" maxlength="15" required>
                 </div>
-                <div>
+                <div class="form-control">
                     <label for="password">Contraseña</label>
                     <input type="password" id="password" name="password" maxlength="15" required>
                 </div>
-                <div>
+                <div class="form-control">
                     <label for="pais">Pais</label>
-                    <select name="pais" id="pais">
+                    <select class="form-select" id="pais">
                         <option value="">Seleccione un país</option>
                         <option value="AR">Argentina</option>
                         <option value="BR">Brasil</option>
@@ -70,13 +85,23 @@
                     </select>
                 </div>
 
-                <input type="submit" value="Registrarse">
-                <input type="reset" value="Eliminar datos">
+                <div class="form-terms">
+                    <div class="terms">
+                        <input type="checkbox"  id="terms">
+                        <label for="terms">Acepto terminos y condiciones</label>
+
+                    </div>
+                </div>
+
+                <button type="submit">Registrarse</button>
+                <div>
+                    <a href="#">¿Necesitas ayuda?</a>
+                </div>
 
             </form>
 
         </section>
-        
+        <!-- Más elementos de película 
         <footer>
             <div class="social-icons">
                 <a href="http://www.facebook.com"><i class="fa-brands fa-square-facebook"></i></a>
@@ -112,7 +137,7 @@
                 </div>
             </div>
             <p> &copy; 2024 Mi primera pagina. todos los derechos reservados</p>
-        </footer>
+        </footer> -->
     </main>
 </body>
 
